@@ -1,20 +1,22 @@
 <?php
-$handle = fopen ("php://stdin","r");
-$i = 4;
-$d = 4.0;
-$s = "HackerRank ";
+// Declare variables
+$intVariable = 0;
+$doubleVariable = 0.0;
+$stringVariable = "";
 
-// Variables declaration
-$intVariable = intval(fgets(STDIN));
-$doubleVariable = floatval(fgets(STDIN));
-$stringVariable = fgets(STDIN);
+// Read input from stdin
+$intVariable = intval(trim(fgets(STDIN)));
+$doubleVariable = floatval(trim(fgets(STDIN)));
+$stringVariable = trim(fgets(STDIN));
 
-// Operations
+// Perform the operations
 $sumInt = $i + $intVariable;
 $sumDouble = $d + $doubleVariable;
 
 // Print the results
-echo "$sumInt\n$sumDouble\n$s$stringVariable";
+echo $sumInt . "\n";
+echo number_format($sumDouble, 1) . "\n";
+echo $s . $stringVariable;
 
 fclose($handle);
 ?>
